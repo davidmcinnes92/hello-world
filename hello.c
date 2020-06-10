@@ -32,6 +32,7 @@ int main()
 	
 	printf("%d \n", head->val);
 	
+	// Free the memory to prevent memory leaks
 	free(head);	
 	free(next);
 }
