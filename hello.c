@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Typedef for the node of the linked list
 typedef struct node {
@@ -35,6 +36,16 @@ int main()
 	// Free the memory to prevent memory leaks
 	free(head);	
 	free(next);
+	
+	char reply[50];
+	
+	printf("Is it your birth month?: ");
+	// Get the user response
+	fgets(reply, 50, stdin);
+	if (strcmp("yes", reply))
+		printf("Yes, it is your birth month! I love you! \n");
+	else
+		printf("But it is your birth month! I love you!\n");
 }
 
 // Takes two integers and adds them together simply
@@ -42,3 +53,11 @@ int add(int num1, int num2)
 {
 	return num1 + num2;
 }
+
+// Takes two integers and subtracts the second from the first
+int subtract(int num1, int num2)
+{	
+	return num1 - num2;
+}
+
+
